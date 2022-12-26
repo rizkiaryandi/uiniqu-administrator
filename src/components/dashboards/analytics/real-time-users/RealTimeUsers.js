@@ -54,7 +54,7 @@ const RealTimeUsers = ({ data }) => {
             style={{ borderBottom: '1px solid rgba(255, 255, 255, 0.15)' }}
           >
             <Flex justifyContent="between">
-              <p className="mb-0">Most Active Pages</p>
+              <p className="mb-0">Most Opened Surah</p>
               <p className="mb-0">User Count</p>
             </Flex>
           </div>

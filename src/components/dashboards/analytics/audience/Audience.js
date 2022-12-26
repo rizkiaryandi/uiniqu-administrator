@@ -39,7 +39,7 @@ const Audience = ({ chartData, className }) => {
                 <Nav.Link className="mb-0" eventKey="users">
                   <TabTitle
                     title="Users"
-                    value="3.9K"
+                    value="10"
                     progress={true}
                     percentage="62.0%"
                   />
@@ -49,7 +49,7 @@ const Audience = ({ chartData, className }) => {
                 <Nav.Link className="mb-0" eventKey="sessions">
                   <TabTitle
                     title="Sessions"
-                    value="6.3K"
+                    value="4"
                     progress={true}
                     percentage="46.2%"
                   />

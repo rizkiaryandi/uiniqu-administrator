@@ -1,10 +1,48 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import PageHeader from 'components/common/PageHeader';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Button, Tab } from 'react-bootstrap';
+import UiniquTable from 'uiniqu/components/UiniquTable';
+import { get, getUser } from 'uiniqu/base';
 
 const Tadarus = () => {
+  const [data, setData] = useState([]);
+
+  const columns = [
+    {
+      accessor: 'user_uid',
+      Header: 'Pengguna'
+    },
+    {
+      accessor: 'created_at',
+      Header: 'Disimpan'
+    },
+    {
+      accessor: 'surah_name',
+      Header: 'Nama Surat'
+    },
+    {
+      accessor: 'ayah_number',
+      Header: 'Nomor Ayat'
+    }
+  ];
+
+  const getTadarus = () => {
+    get('tadarus', {
+      header: new Headers({
+        Authorization: getUser().token
+      })
+    }).then(result => {
+      setData(result.data.data);
+    });
+  };
+
+  useEffect(() => {
+    if (data.length == 0) {
+      getTadarus();
+    }
+  });
   return (
     <>
       <PageHeader
@@ -24,11 +62,7 @@ const Tadarus = () => {
         </Button>
       </PageHeader>
 
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos deserunt
-        tempore cupiditate soluta ipsum. Eum, inventore illum. Vero quaerat qui,
-        ad ab facilis quasi, a quod voluptatibus voluptas dicta debitis!
-      </p>
+      <UiniquTable columns={columns} data={data}></UiniquTable>
     </>
   );
 };

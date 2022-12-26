@@ -25,7 +25,6 @@ const LoginForm = ({ hasLabel, layout }) => {
     fd.append('password', formData.password);
     post('login', fd)
       .then(result => {
-        // console.log(result);
         if (result.data.data.name !== undefined) {
           toast.success(`Masuk sebagai ${result.data.data.name}`, {
             theme: 'colored'

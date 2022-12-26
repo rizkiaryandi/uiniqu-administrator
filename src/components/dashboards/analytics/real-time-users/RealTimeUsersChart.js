@@ -100,11 +100,11 @@ const RealTimeUsersChart = ({ setUserCount }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const rndData = getRandomNumber(900, 1000);
+      const rndData = getRandomNumber(1, 10);
       data.shift();
       data.push(rndData);
       axisData.shift();
-      axisData.push(getRandomNumber(100, 500));
+      axisData.push(getRandomNumber(1, 10));
 
       setUserCount(rndData);
 

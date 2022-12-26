@@ -24,12 +24,11 @@ const ConnectCard = () => {
             <Row className="align-items-center">
               <Col className="pe-xl-8">
                 <h5 className="fs-0 mb-3 mb-sm-0 text-primary">
-                  Connect your domain to your website and get things done faster
-                  with Falcon
+                  Uiniqu versi mobile, klik detail untuk analisis lebih lengkap
                 </h5>
               </Col>
               <Col xs="auto" className="ms-auto">
-                <Button variant="falcon-primary">Connect</Button>
+                <Button variant="falcon-primary">Detail</Button>
               </Col>
             </Row>
           </Col>

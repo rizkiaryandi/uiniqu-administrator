@@ -15,15 +15,15 @@ export const put = (url, data, header) => {
 };
 
 export const del = (url, data, header) => {
-  return axios.put(`${BASE_URL}/${url}`, data, header);
+  return axios.delete(`${BASE_URL}/${url}`, data, header);
 };
 
 export const setUser = item => {
-  localStorage.setItem('userinfo', item);
+  localStorage.setItem('userinfo', JSON.stringify(item));
 };
 
 export const getUser = () => {
-  return localStorage.getItem('userinfo');
+  return JSON.parse(localStorage.getItem('userinfo'));
 };
 
 export const dropUser = () => {

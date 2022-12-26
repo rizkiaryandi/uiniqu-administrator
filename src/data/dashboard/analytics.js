@@ -23,28 +23,12 @@ export const audienceChart = {
 
 export const realTimeUsers = [
   {
-    page: '/bootstrap-themes/',
-    count: 3
+    page: 'Al Baqarah',
+    count: 2
   },
   {
-    page: '/tags/html5/',
-    count: 3
-  },
-  {
-    page: '/',
-    count: 3
-  },
-  {
-    page: '/preview/falcon/dashboard/',
-    count: 3
-  },
-  {
-    page: '/100-best-themes...all-time/',
-    count: 3
-  },
-  {
-    page: '/product/falcon-admin-dashboard/',
-    count: 3
+    page: 'Al Fatihah',
+    count: 1
   }
 ];
 
